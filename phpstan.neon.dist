@@ -1,0 +1,16 @@
+includes:
+    - vendor/larastan/larastan/extension.neon
+
+parameters:
+    level: 6
+    paths:
+        - src
+        - config
+        - tests
+    checkModelProperties: false
+
+    # This is a package, not an application: its config lives here, not at the
+    # host app's config_path(). Point larastan's env()-outside-of-config rule at
+    # the real directory so it checks src and tests, not this file.
+    configDirectories:
+        - %currentWorkingDirectory%/config

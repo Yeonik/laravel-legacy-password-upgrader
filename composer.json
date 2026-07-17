@@ -1,0 +1,64 @@
+{
+    "name": "yeonik/laravel-legacy-password-upgrader",
+    "description": "Transparently upgrade legacy password hashes (MD5/SHA1/salted) to bcrypt the first time a user signs in.",
+    "keywords": [
+        "laravel",
+        "password",
+        "bcrypt",
+        "legacy",
+        "migration",
+        "hashing",
+        "authentication",
+        "rehash"
+    ],
+    "homepage": "https://github.com/yeonik/laravel-legacy-password-upgrader",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "yeonik"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "illuminate/auth": "^12.0",
+        "illuminate/contracts": "^12.0",
+        "illuminate/database": "^12.0",
+        "illuminate/hashing": "^12.0",
+        "illuminate/support": "^12.0"
+    },
+    "require-dev": {
+        "larastan/larastan": "^3.0",
+        "laravel/pint": "^1.0",
+        "orchestra/testbench": "^10.0",
+        "phpstan/phpstan": "^2.0",
+        "phpunit/phpunit": "^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Yeonik\\LegacyPasswordUpgrader\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Yeonik\\LegacyPasswordUpgrader\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "lint": "vendor/bin/pint --test",
+        "analyse": "vendor/bin/phpstan analyse",
+        "test": "vendor/bin/phpunit"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Yeonik\\LegacyPasswordUpgrader\\LegacyPasswordUpgraderServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
