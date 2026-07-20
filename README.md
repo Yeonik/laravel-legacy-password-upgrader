@@ -23,7 +23,7 @@ whether a real "rewrite and migrate" ships or stalls.
 
 ## Requirements
 
-PHP 8.3+, Laravel 12+.
+PHP 8.3+, Laravel 12 or 13. Both are covered by CI on PHP 8.3 and 8.4.
 
 Laravel 11 is not supported: the 11.x branch is past security support and every
 release in it is affected by unpatched advisories (CVE-2026-48019 among them),
