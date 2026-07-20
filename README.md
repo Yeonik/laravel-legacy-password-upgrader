@@ -1,5 +1,10 @@
 # laravel-legacy-password-upgrader
 
+[![CI](https://github.com/Yeonik/laravel-legacy-password-upgrader/actions/workflows/ci.yml/badge.svg)](https://github.com/Yeonik/laravel-legacy-password-upgrader/actions/workflows/ci.yml)
+[![PHP](https://img.shields.io/badge/PHP-8.3%2B-777bb4)](https://www.php.net/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
+[![PHPStan](https://img.shields.io/badge/PHPStan-level%206-2a5ea7)](phpstan.neon.dist)
+
 Transparently upgrade legacy password hashes (MD5 / SHA1 / salted MD5) to bcrypt
 the first time a user signs in. Users migrate themselves, silently, with no mass
 reset email, no forced migration, and no downtime.
