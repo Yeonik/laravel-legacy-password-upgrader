@@ -1,0 +1,17 @@
+version: 2
+
+updates:
+  # PHP dependencies declared in composer.json.
+  - package-ecosystem: "composer"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+
+  # Actions pinned in .github/workflows/, so a deprecated runner version or a
+  # security fix in an action surfaces as a PR instead of a CI warning.
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
